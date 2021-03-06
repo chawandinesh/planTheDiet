@@ -107,7 +107,7 @@ export default function AddDetails(props) {
           <View
             style={{
               justifyContent: 'center',
-              width: height * 0.12,
+              width: height * 0.16,
               alignSelf: 'center',
               // borderTopRightRadius: 10,
               // borderBottomRightRadius: 10,
@@ -118,8 +118,8 @@ export default function AddDetails(props) {
               flexDirection: 'row',
               alignItems: 'center',
               backgroundColor: '#fff',
-              height: height * 0.11,
-              padding: 5,
+              height: height * 0.15,
+              padding: 15,
             }}>
             <TouchableOpacity
               onPress={() => pickImage()}
@@ -140,6 +140,10 @@ export default function AddDetails(props) {
                 // <Text style={{textAlign: 'center'}}>No Image</Text>
               )}
             </TouchableOpacity>
+          </View>
+
+          <View style={{backgroundColor:'#fab', width: width * 0.8, alignSelf:'center', height: 5}}>
+
           </View>
 
           <View
