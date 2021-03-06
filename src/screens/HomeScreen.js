@@ -130,7 +130,7 @@ export default function HomeScreen(props) {
               width: width * 0.4,
               borderRadius: height * 0.01,
               backgroundColor: '#fff',
-              borderColor:'#7303fc',
+              borderColor: '#7303fc',
               marginBottom: height * 0.03,
               alignItems: 'center',
               justifyContent: 'center',
@@ -158,21 +158,21 @@ export default function HomeScreen(props) {
               width: width * 0.4,
               borderRadius: height * 0.01,
               backgroundColor: '#fff',
-              borderColor:'#7303fc',
-              borderWidth: 3,
+              borderColor: '#7303fc',
               marginBottom: height * 0.03,
-              shadowColor: '#000',
-              shadowOffset: {width: 0, height: 1},
-              shadowOpacity: 0.8,
-              shadowRadius: 2,
-              elevation: 5,
               alignItems: 'center',
               justifyContent: 'center',
+              shadowColor: '#000',
+              borderWidth: 3,
+              shadowOffset: {width: 0, height: 1},
+              shadowOpacity: 1,
+              shadowRadius: 6,
+              elevation: 5,
             }}>
             <Text
               style={{
                 fontSize: height * 0.03,
-                color:'#000',
+                color: '#000',
                 fontWeight: 'bold',
               }}>
               About Us
@@ -185,11 +185,16 @@ export default function HomeScreen(props) {
               width: width * 0.4,
               borderRadius: height * 0.01,
               backgroundColor: '#fff',
-              borderColor:'#7303fc',
+              borderColor: '#7303fc',
               marginBottom: height * 0.03,
-              borderWidth:3,
               alignItems: 'center',
               justifyContent: 'center',
+              shadowColor: '#000',
+              borderWidth: 3,
+              shadowOffset: {width: 0, height: 1},
+              shadowOpacity: 1,
+              shadowRadius: 6,
+              elevation: 5,
             }}>
             <Text
               style={{
@@ -208,11 +213,16 @@ export default function HomeScreen(props) {
               width: width * 0.4,
               borderRadius: height * 0.01,
               backgroundColor: '#fff',
-              borderColor:'#7303fc',
-              borderWidth:3,
+              borderColor: '#7303fc',
               marginBottom: height * 0.03,
               alignItems: 'center',
               justifyContent: 'center',
+              shadowColor: '#000',
+              borderWidth: 3,
+              shadowOffset: {width: 0, height: 1},
+              shadowOpacity: 1,
+              shadowRadius: 6,
+              elevation: 5,
             }}>
             <Text
               style={{

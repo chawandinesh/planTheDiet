@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 export default function Navigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerTintColor: '#000'}}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Categories" component={Categories} />
         <Stack.Screen name="Details" component={Details} />
