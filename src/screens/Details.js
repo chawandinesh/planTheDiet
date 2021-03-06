@@ -24,7 +24,7 @@ export default function Details(props) {
   React.useLayoutEffect(() => {
     props.navigation.setOptions({
       headerTitleAlign: 'center',
-      headerStyle: {backgroundColor: '#FEBDB6'},
+      headerStyle: {backgroundColor: '#96DBFC'},
       headerTintColor: '#000',
       headerTitle: categoryItem,
       headerRight: () => {
@@ -83,32 +83,49 @@ export default function Details(props) {
             borderLeftWidth: 2,
           }}>
           <Text style={{fontSize: 20, fontWeight: 'bold'}}>
-            {item.Diet ? item.Diet : '--'}
+            {item.Title ? item.Title : '--'}
           </Text>
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            width: width * 0.88,
-            alignSelf: 'center',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
+        <View style={{height: height * 0.08, justifyContent: 'center'}}>
           <View
             style={{
-              height: height * 0.11,
-              justifyContent: 'center',
-              backgroundColor: '#ffd',
-              height: height * 0.05,
-              borderTopRightRadius: height * 0.04,
-              borderBottomRightRadius: height * 0.04,
+              flexDirection: 'row',
+              width: width * 0.88,
+              alignSelf: 'center',
+              justifyContent: 'space-between',
               alignItems: 'center',
-              borderBottomWidth: 3,
-              width: width * 0.88 - height * 0.11,
             }}>
-            <Text>{item['Diet Timings'] ? item['Diet Timings'] : '--'}</Text>
-          </View>
-          <View
+            <View
+              style={{
+                height: height * 0.11,
+                justifyContent: 'center',
+                backgroundColor: '#ffd',
+                height: height * 0.05,
+                borderTopRightRadius: height * 0.04,
+                borderBottomRightRadius: height * 0.04,
+                alignItems: 'center',
+                borderBottomWidth: 3,
+                // width: width * 0.88 - height * 0.11,
+                width: width * 0.4,
+              }}>
+              <Text>{item['Price'] ? item['Price'] : '--'}</Text>
+            </View>
+            <View
+              style={{
+                height: height * 0.11,
+                justifyContent: 'center',
+                backgroundColor: '#ffd',
+                height: height * 0.05,
+                borderTopLeftRadius: height * 0.04,
+                borderBottomLeftRadius: height * 0.04,
+                alignItems: 'center',
+                borderBottomWidth: 3,
+                width: width * 0.4,
+                // width: width * 0.88 - height * 0.11,
+              }}>
+              <Text>{item['type'] ? item['type'] : '--'}</Text>
+            </View>
+            {/* <View
             style={{
               width: height * 0.11,
               height: height * 0.11,
@@ -131,17 +148,16 @@ export default function Details(props) {
             ) : (
               <Text>NO image</Text>
             )}
+          </View> */}
           </View>
         </View>
       </TouchableOpacity>
     );
   };
-  const data = [1, 2, 3, 4, 5, 6];
-  //   const data = []
   return (
     <ImageBackground
       style={{width, height}}
-      source={require('../assets/bg6.jpg')}>
+      source={require('../assets/bill5.jpg')}>
       {state[categoryItem].length ? (
         <View
           style={{height: height * 0.9, width: width, alignItems: 'center'}}>
@@ -155,7 +171,7 @@ export default function Details(props) {
       ) : (
         <View
           style={{
-            height: height * 0.9,
+            height: height * 0.4,
             width,
             alignItems: 'center',
             justifyContent: 'center',
@@ -167,6 +183,8 @@ export default function Details(props) {
               justifyContent: 'center',
               borderLeftWidth: 5,
               borderRightWidth: 5,
+              borderRadius: height * 0.1,
+              padding: 10,
               backgroundColor: '#fff',
             }}>
             <Text

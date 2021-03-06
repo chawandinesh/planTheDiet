@@ -11,7 +11,7 @@ export default function AllDetails(props) {
   React.useLayoutEffect(() => {
     props.navigation.setOptions({
       headerTitleAlign: 'center',
-      headerStyle: {backgroundColor: '#FEBDB6'},
+      headerStyle: {backgroundColor: '#96DBFC'},
       headerTintColor: '#000',
     });
   }, [props.navigation]);
@@ -45,37 +45,55 @@ export default function AllDetails(props) {
             backgroundColor: '#fff',
           }}>
           <Text style={{fontSize: 20, fontWeight: 'bold'}}>
-            {item.Diet ? item.Diet : '--'}
+            {item.Title ? item.Title : '--'}
           </Text>
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            width: width * 0.88,
-            alignSelf: 'center',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
+        <View style={{height: height * 0.08, justifyContent: 'center'}}>
           <View
             style={{
-              height: height * 0.11,
-              justifyContent: 'center',
-              backgroundColor: '#ffd',
-              height: height * 0.05,
-              borderTopRightRadius: height * 0.04,
-              borderBottomRightRadius: height * 0.04,
+              flexDirection: 'row',
+              width: width * 0.88,
+              alignSelf: 'center',
+              justifyContent: 'space-between',
               alignItems: 'center',
-              borderBottomWidth: 3,
-              width: width * 0.88 - height * 0.11,
             }}>
-            <Text>{item['Diet Timings'] ? item['Diet Timings'] : '--'}</Text>
-          </View>
-          <View
+            <View
+              style={{
+                height: height * 0.11,
+                justifyContent: 'center',
+                backgroundColor: '#ffd',
+                height: height * 0.05,
+                borderTopRightRadius: height * 0.04,
+                borderBottomRightRadius: height * 0.04,
+                alignItems: 'center',
+                borderBottomWidth: 3,
+                // width: width * 0.88 - height * 0.11,
+                width: width * 0.4,
+              }}>
+              <Text>{item['Price'] ? item['Price'] : '--'}</Text>
+            </View>
+            <View
+              style={{
+                height: height * 0.11,
+                justifyContent: 'center',
+                backgroundColor: '#ffd',
+                height: height * 0.05,
+                borderTopLeftRadius: height * 0.04,
+                borderBottomLeftRadius: height * 0.04,
+                alignItems: 'center',
+                borderBottomWidth: 3,
+                width: width * 0.4,
+                // width: width * 0.88 - height * 0.11,
+              }}>
+              <Text>{item['type'] ? item['type'] : '--'}</Text>
+            </View>
+            {/* <View
             style={{
               width: height * 0.11,
               height: height * 0.11,
               backgroundColor: '#fff',
               borderRadius: height * 0.06,
+              borderWidth: 1,
               alignItems: 'center',
               justifyContent: 'center',
             }}>
@@ -92,6 +110,7 @@ export default function AllDetails(props) {
             ) : (
               <Text>NO image</Text>
             )}
+          </View> */}
           </View>
         </View>
       </View>
@@ -102,7 +121,7 @@ export default function AllDetails(props) {
   return (
     <ImageBackground
       style={{width, height}}
-      source={require('../assets/bg6.jpg')}>
+      source={require('../assets/bill1.jpg')}>
       {allData.length ? (
         <View
           style={{height: height * 0.9, width: width, alignItems: 'center'}}>

@@ -12,7 +12,7 @@ import {
 import {AirbnbRating, Divider} from 'react-native-elements';
 const {height, width} = Dimensions.get('window');
 export default function HomeScreen(props) {
-  console.log(height,width)
+  console.log(height, width);
   const [modalVisible, setModalVisible] = React.useState(false);
   React.useLayoutEffect(() => {
     props.navigation.setOptions({
@@ -38,11 +38,11 @@ export default function HomeScreen(props) {
                 margin: height * 0.01,
               }}
               resizeMode="stretch"
-              source={require('../assets/bg7.jpg')}
+              source={require('../assets/bill3.jpg')}
             />
             <Text
               style={[{...Styles.modalText, fontSize: 20, fontWeight: 'bold'}]}>
-              Enjoying Plan The Diet?
+              Enjoying Our Application?
             </Text>
             <Text style={{fontSize: 15}}>Tap a star to rate it on the</Text>
             <Text style={{fontSize: 15}}>App Store.</Text>
@@ -82,9 +82,9 @@ export default function HomeScreen(props) {
   };
   return (
     <ImageBackground
-      source={require('../assets/bg6.jpg')}
+      source={require('../assets/bill4.jpg')}
       style={{height, width}}>
-      <View
+      {/* <View
         style={{
           height: height * 0.4,
           justifyContent: 'flex-end',
@@ -108,105 +108,122 @@ export default function HomeScreen(props) {
             Plan The Diet
           </Text>
         </ImageBackground>
-      </View>
+      </View> */}
       <View
         style={{
-          height: height * 0.6,
-          justifyContent: 'center',
+          height: height * 0.4,
           alignItems: 'center',
+          justifyContent: 'center',
         }}>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('Categories')}
+        <View
           style={{
-            height: height * 0.07,
-            width: width * 0.4,
-            borderRadius: height * 0.01,
-            backgroundColor: '#ba2d7f',
-            marginBottom: height * 0.03,
+            justifyContent: 'space-around',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            width: width,
             alignItems: 'center',
-            justifyContent: 'center',
-            shadowColor: '#000',
-            shadowOffset: {width: 0, height: 1},
-            shadowOpacity: 1,
-            shadowRadius: 6,
-            elevation: 5,
           }}>
-          <Text
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('Categories')}
             style={{
-              fontSize: height * 0.03,
-              color: '#fff',
-              fontWeight: 'bold',
+              height: height * 0.07,
+              width: width * 0.4,
+              borderRadius: height * 0.01,
+              backgroundColor: '#fff',
+              borderColor:'#7303fc',
+              marginBottom: height * 0.03,
+              alignItems: 'center',
+              justifyContent: 'center',
+              shadowColor: '#000',
+              borderWidth: 3,
+              shadowOffset: {width: 0, height: 1},
+              shadowOpacity: 1,
+              shadowRadius: 6,
+              elevation: 5,
             }}>
-            Add Details
-          </Text>
-        </TouchableOpacity>
+            <Text
+              style={{
+                fontSize: height * 0.03,
+                color: '#000',
+                fontWeight: 'bold',
+              }}>
+              Add Details
+            </Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('AboutUs')}
-          style={{
-            height: height * 0.07,
-            width: width * 0.4,
-            borderRadius: height * 0.01,
-            backgroundColor: '#ba2d7f',
-            marginBottom: height * 0.03,
-            shadowColor: '#000',
-            shadowOffset: {width: 0, height: 1},
-            shadowOpacity: 0.8,
-            shadowRadius: 2,
-            elevation: 5,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('AboutUs')}
             style={{
-              fontSize: height * 0.03,
-              color: '#fff',
-              fontWeight: 'bold',
+              height: height * 0.07,
+              width: width * 0.4,
+              borderRadius: height * 0.01,
+              backgroundColor: '#fff',
+              borderColor:'#7303fc',
+              borderWidth: 3,
+              marginBottom: height * 0.03,
+              shadowColor: '#000',
+              shadowOffset: {width: 0, height: 1},
+              shadowOpacity: 0.8,
+              shadowRadius: 2,
+              elevation: 5,
+              alignItems: 'center',
+              justifyContent: 'center',
             }}>
-            About Us
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('AllDetails')}
-          style={{
-            height: height * 0.07,
-            width: width * 0.4,
-            borderRadius: height * 0.01,
-            backgroundColor: '#ba2d7f',
-            marginBottom: height * 0.03,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text
+            <Text
+              style={{
+                fontSize: height * 0.03,
+                color:'#000',
+                fontWeight: 'bold',
+              }}>
+              About Us
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('AllDetails')}
             style={{
-              fontSize: height * 0.03,
-              color: '#fff',
-              fontWeight: 'bold',
+              height: height * 0.07,
+              width: width * 0.4,
+              borderRadius: height * 0.01,
+              backgroundColor: '#fff',
+              borderColor:'#7303fc',
+              marginBottom: height * 0.03,
+              borderWidth:3,
+              alignItems: 'center',
+              justifyContent: 'center',
             }}>
-            All Details
-          </Text>
-        </TouchableOpacity>
+            <Text
+              style={{
+                fontSize: height * 0.03,
+                color: '#000',
+                fontWeight: 'bold',
+              }}>
+              All Details
+            </Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-          onPress={() => setModalVisible(true)}
-          style={{
-            height: height * 0.07,
-            width: width * 0.4,
-            borderRadius: height * 0.01,
-            backgroundColor: '#ba2d7f',
-            marginBottom: height * 0.03,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text
+          <TouchableOpacity
+            onPress={() => setModalVisible(true)}
             style={{
-              fontSize: height * 0.03,
-              color: '#fff',
-              fontWeight: 'bold',
+              height: height * 0.07,
+              width: width * 0.4,
+              borderRadius: height * 0.01,
+              backgroundColor: '#fff',
+              borderColor:'#7303fc',
+              borderWidth:3,
+              marginBottom: height * 0.03,
+              alignItems: 'center',
+              justifyContent: 'center',
             }}>
-            Rate Us
-          </Text>
-        </TouchableOpacity>
+            <Text
+              style={{
+                fontSize: height * 0.03,
+                color: '#000',
+                fontWeight: 'bold',
+              }}>
+              Rate Us
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
       {ModalItem()}
     </ImageBackground>

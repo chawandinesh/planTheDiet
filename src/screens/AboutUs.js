@@ -9,7 +9,7 @@ export default function AllDetails(props) {
     props.navigation.setOptions({
       headerTitleAlign: 'center',
       headerTitle: 'About Us',
-      headerStyle: {backgroundColor: '#FEBDB6'},
+      headerStyle: {backgroundColor: '#96DBFC'},
       headerTintColor: '#000',
     });
   }, [props.navigation]);
@@ -17,15 +17,15 @@ export default function AllDetails(props) {
   return (
     <ImageBackground
       style={{width, height, alignItems: 'center', justifyContent: 'center'}}
-      source={require('../assets/bg7.jpg')}>
+      source={require('../assets/bill3.jpg')}>
       <View
         style={{
           width: width * 0.9,
-          height: height * 0.8,
+          height: height * 0.7,
           alignItems: 'center',
           padding: height * 0.02,
           //   justifyContent:'center',
-          backgroundColor: 'rgba(0,0,0,0.8)',
+          backgroundColor: 'rgba(0,0,0,0.5)',
         }}>
         <Text
           style={{fontSize: height * 0.04, fontWeight: 'bold', color: '#fff', marginBottom: height * 0.05}}>
@@ -49,8 +49,7 @@ export default function AllDetails(props) {
             textAlign: 'center',
             paddingTop: height * 0.04,
           }}>
-          In this app, there are various  Diet categories like Carbohydrates,
-          Protiens, Fats, Vitamins.....
+          In this app, User can manage their bill and transations to the particular department bills
         </Text>
         <Text
           style={{
@@ -66,7 +65,7 @@ export default function AllDetails(props) {
           style={{
             fontSize: height * 0.03,
             fontWeight: 'bold',
-            color: '#f66',
+            color: '#37f',
             textAlign: 'center',
             paddingTop: height * 0.01,
           }}>

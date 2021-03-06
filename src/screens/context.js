@@ -1,12 +1,15 @@
 import React from 'react';
 const initialState = {
-  Carbohydrates: [],
-  Proteins: [],
-  Fats: [],
-  Vitamins: [],
-  Minerals: [],
-  'Dietary fibre': [],
-  Water: [],
+  Electrical: [],
+  Mechanical: [],
+  Electronic: [],
+  Sanitory: [],
+  Clothes: [],
+  Cosmetic: [],
+  Food:[],
+  Departmental:[],
+  Stationary:[],
+  Other: [],
 };
 
 export const TravelContext = React.createContext(null);
