@@ -106,120 +106,19 @@ export default function AddDetails(props) {
           }}>
           <View
             style={{
-              height: height * 0.07,
-              marginBottom: height * 0.03,
-              backgroundColor: '#fff',
-              borderTopRightRadius: height * 0.03,
-              borderBottomLeftRadius: height * 0.03,
-              borderBottomColor: '#abc',
-              borderTopWidth: 3,
-              borderRightWidth: 5,
-              borderLeftWidth: 5,
-              borderBottomWidth: 5,
-            }}>
-            <TextInput
-              placeholder={fields[0]}
-              value={formState[fields[0]]}
-              onChangeText={(text) =>
-                setFormState({...formState, [fields[0]]: text})
-              }
-            />
-          </View>
-          <View
-            style={{
-              height: height * 0.07,
-              marginBottom: height * 0.03,
-              backgroundColor: '#fff',
-              borderTopWidth: 3,
-              borderRightWidth: 5,
-              borderLeftWidth: 5,
-              borderBottomWidth: 5,
-              borderTopRightRadius: height * 0.03,
-              borderBottomLeftRadius: height * 0.03,
-              borderBottomColor: '#abc',
-            }}>
-            <TextInput
-              placeholder={fields[1]}
-              value={formState[fields[1]]}
-              onChangeText={(text) =>
-                setFormState({...formState, [fields[1]]: text})
-              }
-            />
-          </View>
-          <View
-            style={{
-              height: height * 0.07,
-              marginBottom: height * 0.03,
-              backgroundColor: '#fff',
-              borderTopRightRadius: height * 0.03,
-              borderBottomLeftRadius: height * 0.03,
-              borderBottomColor: '#abc',
-              borderTopWidth: 3,
-              borderRightWidth: 5,
-              borderLeftWidth: 5,
-              borderBottomWidth: 5,
-            }}>
-            <TextInput
-              placeholder={fields[2]}
-              value={formState[fields[2]]}
-              onChangeText={(text) =>
-                setFormState({...formState, [fields[2]]: text})
-              }
-            />
-          </View>
-          <View
-            style={{
-              height: height * 0.07,
-              marginBottom: height * 0.03,
-              backgroundColor: '#fff',
-              borderTopRightRadius: height * 0.03,
-              borderBottomLeftRadius: height * 0.03,
-              borderBottomColor: '#abc',
-              borderTopWidth: 3,
-              borderRightWidth: 5,
-              borderLeftWidth: 5,
-              borderBottomWidth: 5,
-            }}>
-            <TextInput
-              placeholder={fields[3]}
-              value={formState[fields[3]]}
-              onChangeText={(text) =>
-                setFormState({...formState, [fields[3]]: text})
-              }
-            />
-          </View>
-
-          <View
-            style={{
-              height: height * 0.07,
-              marginBottom: height * 0.03,
-              backgroundColor: '#fff',
-              borderTopRightRadius: height * 0.03,
-              borderBottomLeftRadius: height * 0.03,
-              borderBottomColor: '#abc',
-              borderTopWidth: 3,
-              borderRightWidth: 5,
-              borderLeftWidth: 5,
-              borderBottomWidth: 5,
-            }}>
-            <TextInput
-              placeholder={fields[4]}
-              value={formState[fields[4]]}
-              onChangeText={(text) =>
-                setFormState({...formState, [fields[4]]: text})
-              }
-            />
-          </View>
-
-          <View
-            style={{
-              justifyContent: 'space-between',
-              width: width * 0.9,
+              justifyContent: 'center',
+              width: height * 0.12,
               alignSelf: 'center',
+              // borderTopRightRadius: 10,
+              // borderBottomRightRadius: 10,
+              borderRadius: 10,
+              borderLeftWidth: 5,
+              borderRightWidth: 5,
+              borderBottomWidth: 3,
               flexDirection: 'row',
               alignItems: 'center',
               backgroundColor: '#fff',
-              height: height * 0.13,
+              height: height * 0.11,
               padding: 5,
             }}>
             <TouchableOpacity
@@ -237,20 +136,233 @@ export default function AddDetails(props) {
                   style={{height: height * 0.1, width: height * 0.1}}
                 />
               ) : (
-                <Text style={{textAlign: 'center'}}>No Image</Text>
+                <Icon name="images" type="entypo" />
+                // <Text style={{textAlign: 'center'}}>No Image</Text>
               )}
             </TouchableOpacity>
-            <View>
-              <Icon name="arrow-long-left" type="entypo" />
-              {/* <Text style={{fontSize: height * 0.03}}> --- </Text> */}
-            </View>
-            <View>
-              <Text style={{fontSize: height * 0.02, fontWeight: 'bold'}}>
-                {' '}
-                Add Image{' '}
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                borderBottomWidth: 5,
+                borderTopRightRadius: 10,
+                borderTopLeftRadius: 10,
+                backgroundColor: '#fab',
+                height: height * 0.07,
+                width: height * 0.1,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text style={{fontWeight: 'bold', fontSize: height * 0.023}}>
+                {fields[0]}
               </Text>
             </View>
+            <View
+              style={{
+                height: height * 0.07,
+                width: width * 0.6,
+                backgroundColor: '#fff',
+                borderBottomLeftRadius: height * 0.03,
+                borderBottomColor: '#cba',
+                borderTopWidth: 3,
+                borderRightWidth: 5,
+                borderLeftWidth: 5,
+                borderBottomWidth: 10,
+              }}>
+              <TextInput
+                placeholder={fields[0]}
+                value={formState[fields[0]]}
+                onChangeText={(text) =>
+                  setFormState({...formState, [fields[0]]: text})
+                }
+              />
+            </View>
           </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                borderBottomWidth: 5,
+                borderTopRightRadius: 10,
+                borderTopLeftRadius: 10,
+                backgroundColor: '#fab',
+                height: height * 0.07,
+                width: height * 0.1,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text style={{fontWeight: 'bold', fontSize: height * 0.023}}>
+                {fields[1]}
+              </Text>
+            </View>
+            <View
+              style={{
+                height: height * 0.07,
+                width: width * 0.6,
+                backgroundColor: '#fff',
+                borderBottomLeftRadius: height * 0.03,
+                borderBottomColor: '#cba',
+                borderTopWidth: 3,
+                borderRightWidth: 5,
+                borderLeftWidth: 5,
+                borderBottomWidth: 10,
+              }}>
+              <TextInput
+                placeholder={fields[1]}
+                value={formState[fields[1]]}
+                onChangeText={(text) =>
+                  setFormState({...formState, [fields[1]]: text})
+                }
+              />
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                borderBottomWidth: 5,
+                borderTopRightRadius: 10,
+                borderTopLeftRadius: 10,
+                backgroundColor: '#fab',
+                height: height * 0.07,
+                width: height * 0.1,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text style={{fontWeight: 'bold', fontSize: height * 0.023}}>
+                {fields[2]}
+              </Text>
+            </View>
+            <View
+              style={{
+                height: height * 0.07,
+                width: width * 0.6,
+                backgroundColor: '#fff',
+                borderBottomLeftRadius: height * 0.03,
+                borderBottomColor: '#cba',
+                borderTopWidth: 3,
+                borderRightWidth: 5,
+                borderLeftWidth: 5,
+                borderBottomWidth: 10,
+              }}>
+              <TextInput
+                placeholder={fields[2]}
+                value={formState[fields[2]]}
+                onChangeText={(text) =>
+                  setFormState({...formState, [fields[2]]: text})
+                }
+              />
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                borderBottomWidth: 5,
+                borderTopRightRadius: 10,
+                borderTopLeftRadius: 10,
+                backgroundColor: '#fab',
+                height: height * 0.07,
+                width: height * 0.13,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  fontSize: height * 0.023,
+                }}>
+                {fields[3]}
+              </Text>
+            </View>
+            <View
+              style={{
+                height: height * 0.07,
+                width: width * 0.6,
+                backgroundColor: '#fff',
+                borderBottomLeftRadius: height * 0.03,
+                borderBottomColor: '#cba',
+                borderTopWidth: 3,
+                borderRightWidth: 5,
+                borderLeftWidth: 5,
+                borderBottomWidth: 10,
+              }}>
+              <TextInput
+                placeholder={fields[3]}
+                value={formState[fields[3]]}
+                onChangeText={(text) =>
+                  setFormState({...formState, [fields[3]]: text})
+                }
+              />
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                borderBottomWidth: 5,
+                borderTopRightRadius: 10,
+                borderTopLeftRadius: 10,
+                backgroundColor: '#fab',
+                height: height * 0.07,
+                width: height * 0.1,
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text style={{fontWeight: 'bold', fontSize: height * 0.023}}>
+                {fields[4]}
+              </Text>
+            </View>
+            <View
+              style={{
+                height: height * 0.07,
+                width: width * 0.6,
+                backgroundColor: '#fff',
+                borderBottomLeftRadius: height * 0.03,
+                borderBottomColor: '#cba',
+                borderTopWidth: 3,
+                borderRightWidth: 5,
+                borderLeftWidth: 5,
+                borderBottomWidth: 10,
+              }}>
+              <TextInput
+                placeholder={fields[4]}
+                value={formState[fields[4]]}
+                onChangeText={(text) =>
+                  setFormState({...formState, [fields[4]]: text})
+                }
+              />
+            </View>
+          </View>
+
+          {/* old */}
 
           <View
             style={{
@@ -262,10 +374,18 @@ export default function AddDetails(props) {
             <TouchableOpacity
               onPress={() => handleSubmit()}
               style={{
-                backgroundColor: 'darkblue',
+                backgroundColor: '#FBBC05',
                 height: height * 0.07,
                 width: width * 0.5,
-                borderBottomWidth: height * 0.005,
+                borderBottomWidth: 6,
+                borderTopWidth: 6,
+                shadowColor: '#000',
+                shadowOffset: {height: 1, width: 1},
+                shadowOpacity: 0.5,
+                shadowRadius: 1,
+                elevation: 3,
+                borderBottomColor: '#abcdef',
+                borderTopColor: '#abcdef',
                 alignItems: 'center',
                 justifyContent: 'center',
                 borderRadius: height * 0.2,
@@ -273,7 +393,7 @@ export default function AddDetails(props) {
               <Text
                 style={{
                   fontSize: height * 0.03,
-                  color: '#fff',
+                  color: '#00a',
                   fontWeight: 'bold',
                 }}>
                 Submit
