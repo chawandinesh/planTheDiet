@@ -99,7 +99,7 @@ export default function AddDetails(props) {
           style={{
             width: width,
             alignSelf: 'center',
-            paddingHorizontal: 10,
+           // paddingHorizontal: 10,
             height: height * 0.9,
             justifyContent: 'space-around',
             backgroundColor: 'rgba(0,0,0,0.5)',
